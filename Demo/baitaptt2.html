@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    var a = [{ image: "IMG/3.jpg", id: 1 ,title: "XIN CHAO", des: "akjshfdo iuewqhdlkj oiew hjlkqwe hjrkwq hrjks hfduioqwh fkjhds qiuew  ryewq  iurhkjdsahfk" },
+        { image: "4.jpg", id: 2, title: "XIN CHAO", des: "akjshfdo iuewqhdlkj oiew hjlkqwe hjrkwq hrjks hfduioqwh fkjhds qiuew  ryewq  iurhkjdsahfk" },
+        { image: "5.jpg", id: 3, title: "XIN CHAO", des: "akjshfdoiuewqhdlkj oiew hjlkqwe hjrkwq hrjks hfduioqwh fkjhds qiu    ewryewq iurhkjdsahfk" },
+        { image: "6.jpg", id: 4, title: "XIN CHAO", des: "akjshfdoiuewqhdlkj oiew hjlkqwe hjrkwq hrjks hfduioqwh fkjhds qiuewryewqiu    rhkjdsahfk" },
+        { image: "7.jpg", id: 5, title: "XIN CHAO", des: "akjshfdoiuewqhdlkj oiew hjlkqwe hjrkwq hrjks hfduioqwh fkjhds qiue wryew qiurh kjds ahfk" }
+    ];
+    var i = 0;
+
+    function next() {
+        if (i < a.length - 1) {
+            i++;
+            var anh = document.getElementById("anh");
+            anh.src = a[i].image;
+            var title = document.getElementById("title");
+            title.innerHTML = a[i].title;
+            var des = document.getElementById("des");
+            des.innerHTML = a[i].des;
+            var id = document.getElementById("vitri");
+            id.innerHTML = a[i].id;
+        }
+    }
+
+    function pre() {
+        if (i > 0) {
+            i--;
+            var anh = document.getElementById("anh");
+            anh.src = a[i].image;
+            var title = document.getElementById("title");
+            title.innerHTML = a[i].title;
+            var des = document.getElementById("des");
+            des.innerHTML = a[i].des;
+            var id = document.getElementById("vitri");
+            id.innerHTML = a[i].id;
+        }
+    }
+
+    function load() {
+        var anh = document.getElementById("anh");
+        anh.src = a[0].image;
+        var title = document.getElementById("title");
+        title.innerHTML = a[0].title;
+        var des = document.getElementById("des");
+        des.innerHTML = a[0].des;
+        var id = document.getElementById("vitri");
+        id.innerHTML = a[0].id;
+    }
+    </script>
+    <style type="text/css">
+    #big {
+        width: 90%;
+        height: auto;
+        margin-left: 10%;
+        margin-right: 5%;
+        box-sizing: border-box;
+    }
+
+    .anh {
+        width: 80%;
+        height: 500px;
+    }
+
+    button {
+        position: relative;
+        top: -250px;
+        width: 50px;
+        height: 100px;
+        opacity: 0.7;
+        margin: 4px;
+        background-color: black;
+        color: white;
+        font-size: 2em;
+    }
+    #pre{
+    	left: 30px;
+    }
+    #next{
+    	right:30px;
+    }
+	p{
+		padding-left: 10%;
+	}
+    .vitri{
+    	font-weight: bold;
+    	font-size: 1.5em;
+    }
+    #title{
+    	font-weight: bold;
+    	font-size: 1.2em;
+    }
+    </style>
+</head>
+
+<body onload="load()">
+    <div id="big">
+        <button onclick="pre()" id="pre">&lt;</button>
+        <img id="anh" class="anh">
+        <button onclick="next()" id="next">&gt;</button>
+        <p class="vitri"><span id="vitri"></span> OF 5</p>
+        <p id="title"></p>
+        <p id="des"></p>
+    </div>
+</body>
+
+</html>

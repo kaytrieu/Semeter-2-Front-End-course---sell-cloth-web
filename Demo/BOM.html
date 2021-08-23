@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function openFile () {
+			var w=window.open("http://www.google.com", "", "width=300,height=300");
+			w.moveTo(500,300);
+		}
+		function hengio(){
+			window.setTimeout(openFile, 5000);
+		}
+	</script>
+</head>
+<body onload="hengio()">
+	
+</body>
+</html>

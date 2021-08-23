@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>checkForm</title>
+    <style>
+        span{
+			color:red;
+			display: none;
+		}
+	</style>
+    <script>
+        function check () {
+			var ten=document.f.t1;
+			var dt=document.f.t2;
+			var email=document.f.t3;
+			var diachi=document.f.t4;
+			var mau1=/^[a-zA-Z]+(\s[a-zA-Z]+)*$/;
+			// <!-- lấy tất cả thẻ span có trong form f--!>
+			var a=document.f.getElementsByTagName("span");
+
+			//check ten
+			if(mau1.test(ten.value)==false){
+				a[0].style.display = 'inline';
+			}
+			else{
+				a[0].style.display = "none";
+			}
+
+			//mau check dt
+			var mau2=/^[0-9]{10}$/
+			if(mau2.test(dt.value)==false){
+				a[1].style.display = 'inline';
+			}
+			else{
+				a[1].style.display = "none";
+			}
+
+			//check email
+			var mau3=/^[a-zA-Z0-9]+[@][a-zA-Z]([.][a-zA-Z]){1,2}$/
+			if(mau3.test(email.value)==false){
+				a[2].style.display = 'inline';
+			}
+			else{
+				a[2].style.display = "none";
+			}
+
+			if(diachi.value.length<=0){
+				a[3].style.display = 'inline';
+			}
+			else{
+				a[3].style.display = "none";
+			}
+		}
+	</script>
+</head>
+
+<body>
+    <form name="f">
+        <input type="text" placeholder="nhap ten" name="t1">
+        <span>Error</span><br>
+        <input type="text" placeholder="sdt" name="t2">
+        <span>Error</span><br>
+        <input type="text" placeholder="email" name="t3">
+        <span>Error</span><br>
+        <textarea name="t4" id="" cols="30" rows="10" placeholder="Dia chi"></textarea>
+        <span>Error</span><br>
+        <input type="button" onclick="check()" value="submit">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function quatrang () {
+			//window.location.assign("http://www.google.com");    //chuyển trang nhưng vẫn lưu trang cũ trong history, back được
+			window.location.replace("http://www.google.com");	//không back được
+		}
+		function getSize(){
+			window.alert(window.screen.availWidth);
+			window.alert(window.screen.availHeight);
+		}
+		function getInfor () {
+			window.alert(window.navigator.userAgent);
+		}
+	</script>
+	<style>
+		body{
+			background-image: : "1.jpg";
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	</style>
+</head>
+<body>
+	Day la trang 34
+	<span onclick="quatrang()">Click vao day de thay trang google</span><br>
+	<span onclick="window.location.reload()">Click vao day de refresh</span><br>
+	<span onclick="getSize()">Click vao day de thay kick thuoc man hinh</span><br>
+	<span onclick="getInfor()">Click vao day de xem about browser</span>
+</body>
+</html>

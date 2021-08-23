@@ -1,0 +1,578 @@
+    html {
+        scroll-behavior: smooth;
+    }
+
+    svg {
+        position: fixed;
+        top: -5%;
+        left: 0%;
+        z-index: 3;
+        height: 25%;
+        width: 25%;
+        filter: drop-shadow(5px 10px 10px rgba(255, 255, 255, 1));
+    }
+
+    .st0 {
+        height: 100%;
+        width: 100%;
+        animation-name: blackFill;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+
+    }
+
+    #M {
+        stroke-dasharray: 936px;
+        /*        stroke-dashoffset: 936px; */
+        animation-delay: 0s;
+    }
+
+    #i {
+        stroke-dasharray: 241px;
+        /*        stroke-dashoffset: 241px;  */
+        animation-delay: 0.1s;
+    }
+
+    #H {
+        stroke-dasharray: 775px;
+        /*        stroke-dashoffset: 775px;*/
+        animation-delay: 0.2s;
+    }
+
+    #u {
+        stroke-dasharray: 364px;
+        /*        stroke-dashoffset: 364px;*/
+        animation-delay: 0.3s;
+    }
+
+    #S {
+        stroke-dasharray: 546px;
+        /*        stroke-dashoffset: 546px; */
+        animation-delay: 0.4s;
+    }
+
+    #t {
+        stroke-dasharray: 282px;
+        /*        stroke-dashoffset: 282px; */
+        animation-delay: 0.5s;
+    }
+
+    #o {
+        stroke-dasharray: 353px;
+        /*        stroke-dashoffset: 353px; */
+        animation-delay: 0.6s;
+    }
+
+    #r {
+        stroke-dasharray: 246px;
+        /*        stroke-dashoffset: 246px;*/
+        animation-delay: 0.7s;
+    }
+
+    #e {
+        stroke-dasharray: 409px;
+        /*        stroke-dashoffset: 409px;*/
+        animation-delay: 0.8s;
+    }
+
+
+    @keyframes blackFill {
+
+        from,
+        40% {
+            fill: none;
+        }
+
+        60% {
+            fill: #ffffff;
+        }
+
+        80%,
+        to {
+            fill: #000000;
+        }
+    }
+
+    #content {
+        float: left;
+        width: 100%;
+        height: 700px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .slide {
+        width: 100%;
+        animation: fading 10s infinite;
+    }
+
+    @keyframes fading {
+        0% {
+            opacity: 0.1;
+        }
+
+        30% {
+            opacity: 1;
+        }
+
+        80% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0.1;
+        }
+    }
+
+    #toTop {
+        display: none;
+        position: fixed;
+        bottom: 5%;
+        right: 2%;
+        z-index: 100;
+        cursor: pointer;
+        height: 60px;
+        width: 60px;
+        border-radius: 100%;
+    }
+
+    #toTop:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+
+    }
+
+@media screen and (min-width: 993px) {
+  #Menu {
+    font-size: 1.2vw;
+  }
+  .productPart>span {
+     font-size: 3vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  #Menu {
+    font-size: 3vw;
+  }
+  .productPart>span {
+     font-size: 4vw;
+  }
+}
+    #Menu {
+        float: right;
+        /*width: 35%;*/
+        white-space: nowrap;
+        min-height: 50px;
+        text-align: center;
+        
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+        line-height: 50px;
+        font-family: sans-serif;
+        font-style: normal;
+        box-sizing: border-box;
+        border-radius: 10px 10px 10px 10px;
+        font-weight: bold;
+        z-index: 99;
+        position: fixed;
+        right: 0.5%;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    #Menu>a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .Row {
+        width: 100%;
+        height: 570px;
+        z-index: 1;
+        float: left;
+        margin-top: 150px;
+        transition-duration: 1s;
+        padding-left: 5%;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.7);
+        overflow: hidden;
+    }
+
+    .image>img {
+        border: solid 1px black;
+        box-shadow: 3px 3px 2px black;
+    }
+
+    #firstRow {
+        margin-top: 700px;
+    }
+
+    #secondRow {
+        transform: scale(0) rotate(-5040deg);
+        transition-property: transform:scale();
+        transition-duration: 1.5s;
+        transition-timing-function: ease-in;
+    }
+
+    #thirdRow {
+        transform: translateX(-2000px);
+        transition-duration: 1.5s;
+        transition-timing-function: ease-out;
+    }
+
+    .image {
+        height: 94%;
+        width: 45%;
+        position: relative;
+    }
+
+    #firstRow>.image {
+        float: left;
+        margin: 20px 20px 20px 50px;
+    }
+
+    #secondRow>.image {
+        float: right;
+        margin: 20px 100px 20px 20px;
+    }
+
+    #thirdRow>.image {
+        float: left;
+        margin: 20px 20px 20px 100px;
+    }
+
+    .productName {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 45px;
+        margin-left: -50px;
+    }
+
+    video {
+        float: left;
+        width: 49%;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .subPic11 {
+        width: 23.5%;
+        float: left;
+        position: relative;
+        top: 0;
+        left: 2%;
+    }
+
+    .subPic12 {
+        width: 23.5%;
+        float: right;
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    .subPic21 {
+        width: 23.5%;
+        float: left;
+        position: relative;
+        bottom: -2%;
+        left: 0;
+    }
+
+    .subPic22 {
+        width: 23.5%;
+        float: left;
+        position: relative;
+        bottom: -2%;
+        left: 2%;
+    }
+
+    .mainPic {
+        width: 49%;
+        float: right;
+        position: relative;
+        bottom: -2%;
+    }
+
+    .price {
+        font-family: fantasy;
+        font-size: 35px;
+    }
+
+    .info {
+        float: right;
+        width: 40%;
+        height: 83%;
+        margin-right: 5%;
+        margin-top: 10px;
+        box-sizing: border-box;
+    }
+
+    .info>p {
+        padding: 30px 0px 30px 30px;
+        font-size: 24px;
+        line-height: 2;
+        height: auto;
+    }
+
+    .info>p>a {
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .info>p>a:hover {
+        text-decoration: underline;
+        text-decoration-style: wavy;
+        text-decoration-color: #E000C8;
+    }
+
+    #foot {
+        float: left;
+        width: 100%;
+        height: 670px;
+        margin-top: 150px;
+        background-color: white;
+        z-index: 1;
+        position: relative;
+        box-sizing: border-box;
+        padding-right: 10%;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding-top: 20px;
+    }
+
+    #f1 {
+        width: 12%;
+        position: relative;
+        left: 25%;
+    }
+
+    #f2 {
+        width: 29%;
+        position: relative;
+        left: 30%;
+    }
+
+    #f3 {
+        width: 12%;
+        position: relative;
+        left: 35%;
+        top: -239.2px;
+
+    }
+
+    #f4 {
+        width: 12%;
+        position: relative;
+        left: 8%;
+        top: 50px;
+        float: left;
+    }
+
+    #f5 {
+        width: 12%;
+        position: relative;
+        left: 13%;
+        top: 50px;
+        float: left;
+    }
+
+    #f6 {
+        width: 12%;
+        position: relative;
+        left: 18%;
+        top: 50px;
+        float: left;
+    }
+
+    #f7 {
+        width: 12%;
+        position: relative;
+        left: 23%;
+        top: 50px;
+        float: left;
+    }
+
+    #f8 {
+        width: 29%;
+        position: relative;
+        left: 28.5%;
+        top: -190px;
+        float: left;
+    }
+
+    #insta>p {
+        font-size: 20px;
+        font-family: cursive;
+        margin-bottom: 0;
+    }
+
+    #insta>a {
+        padding-top: 0;
+        box-shadow: 3px 3px 2px black;
+    }
+
+    #insta {
+        float: left;
+        height: 180px;
+        width: 250px;
+        position: relative;
+        top: 400px;
+        left: 200px;
+        z-index: 4;
+    }
+
+    #foot>img {
+        border: solid 1px black;
+        box-shadow: 3px 3px 2px black;
+    }
+
+    #products {
+        float: left;
+        width: 78%;
+        margin: 10% 10% 0 10%;
+        box-sizing: border-box;
+        padding: 2%;
+
+    }
+
+    .productPart {
+        float: left;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.7);
+        margin-top: 50px;
+        padding-top: 25px;
+        text-align: center;
+    }
+
+
+    .productView {
+        text-align: center;
+        font-size: 0;
+        box-sizing: border-box;
+        transition-duration: 0s;
+        z-index: 1;
+    }
+
+    .productView img {
+        width: 100%;
+    }
+
+    .productView:hover {
+        transition-property: transform;
+        transition-duration: 0.5s;
+        font-size: 15px;
+        transform: scale(1.4);
+        background-color: rgba(255, 255, 255, 0.8);
+        border: solid 2px black;
+        box-shadow: 3px 3px 10px #9C9696;
+        z-index: 99;
+    }
+
+    .productView:hover img {
+        animation: scaleimg 0.3s backwards;
+    }
+
+    @keyframes scaleimg {
+        from {
+            transform: scale(0.4);
+        }
+
+        to {
+            transform: scale(1);
+        }
+    }
+
+
+    .productPart>span {
+       width: 100%;
+        text-align: center;
+        font-family: fantasy;
+
+    }
+
+    #header {
+        width: 100%;
+        float: left;
+        height: 200px;
+        font-size: 80px;
+        line-height: 200px;
+        font-family: fantasy;
+        z-index: 1;
+        background-color: #F2B1E7;
+        padding-left: 10%;
+        box-sizing: border-box;
+    }
+
+    #about {
+        float: left;
+        width: 80%;
+        margin: 8% 10% 0% 10%;
+        text-align: justify;
+        font-size: 30px;
+        padding: 5%;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 50px;
+        box-sizing: border-box;
+        line-height: 1.5;
+    }
+
+    #about>span {
+        font-family: 'HandWriting';
+        font-size: 100px;
+        padding-left: 37%
+    }
+
+    .background {
+        background-image: url('https://aldaalvesbarbosa.files.wordpress.com/2011/03/por-do-sol.jpg');
+        height: 100%;
+        width: 100%;
+        float: left;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 25px;
+    }
+
+    .countDown {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 20px 20px 20px 20px;
+        height: 400px;
+        width: 55%;
+    }
+
+    hr {
+        margin: auto;
+        width: 40%;
+    }
+
+    .topLeftLogo {
+        position: absolute;
+        top: 0;
+        left: 16px;
+    }
+
+    #contact {
+        position: fixed;
+        z-index: 99;
+        left: 0;
+        top: 30%;
+        height: auto;
+        width: 48px;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(183, 194, 58, 0.5);
+        border-radius: 0 10px 10px 0;
+        border: 2px solid #4E511C;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }

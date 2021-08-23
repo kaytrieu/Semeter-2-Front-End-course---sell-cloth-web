@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function openlink (the) {
+			var i=the.selectedIndex;
+			if(i==1)
+				window.open("https://www.google.com","_blank");
+			else if(i==2)
+				window.open("https://fap.fpt.edu.vn","_blank");
+		}
+		function laydongho () {
+			var d=new new Date
+		}
+	</script>
+	<style type="text/css">
+		div{
+			width: 150px; height: 20px;
+			border-radis:10px;
+		}
+		div p{
+			font-size:1.1em;
+			text-align: center;
+			font-family: fantasy;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p id="ngay"></p>
+		<p id="thang"></p>
+		<p id="nam"></p>
+		<p id="gio"></p>
+	</div>
+	<select name="" id="" onchange="openlink(this)">
+		<option value="">Choose link</option>
+		<option value="">Google</option>
+		<option value="">FAP</option>
+	</select>
+</body>
+</html>

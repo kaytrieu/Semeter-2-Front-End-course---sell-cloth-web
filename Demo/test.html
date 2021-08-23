@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    function openFile() {
+        var w = window.open("http://www.google.com", "", "width=300,height=300");
+        w.moveTo(500, 300);
+    }
+
+    function hengio() {
+        window.alert(Math.round(7.25));
+    }
+
+    function rec(number) {
+        Sum = 0;
+        if (number > 1) {
+            for (i = 1; i <= number; i++)
+                Sum = Sum + i;
+        }
+        window.alert(Sum);
+    }
+    </script>
+</head>
+
+<body onload="rec(5)">
+</body>
+
+</html>

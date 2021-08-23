@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		.p1{
+			color:gold;	background-color: #900;
+			width: 20%;
+		}
+		.p1:hover{
+			color:#900;background-color: yellow;
+		}
+		a{
+			text-decoration: none;
+			color:black;
+			font-size: 1.5em;
+		}
+		a:link{
+			background-color: #999;
+		}
+		a:hover{
+			background-color: #FF6;
+		}
+		a:active{
+			color:green;
+		}
+		a:visited{
+			background-color: #096;
+		}
+		.p2:first-line{
+			font-family: tahoma;
+		}
+		/*.p2:first-letter{
+			font-size: 3em;
+		}*/
+		.p1:hover::after{
+			content: ">>";
+			color:black;
+			font-size: 1.3em;
+			padding-left: 228px;
+		}
+		.p2:after{ content: "________";font-size: 2em;}
+		.p2:before{ content: "________"; font-size: 2em;}
+		.p3{
+			width: 70%;
+			height: 2px;
+			background-color: grey;
+		}
+		.p3:before{
+			content: "__________";
+			height: 2em;
+			background-color: grey;
+		}
+		.p3:after{content: "tim kiem";
+		float: right;
+	}
+	button{
+		width: 100px;
+		height: 50px;
+		background-color: grey;
+		color:white;
+		text-align: center;
+		position: relative;
+	}
+	button:hover:before{
+		content: "Click de suong ";
+		position: absolute;
+		left: 100px;
+		top:40px;
+		border: 1px solid black;
+		background-color: red;
+		width: 150px;
+		height: 30px;
+		color:black;
+		font-size: 1.5em;
+		padding-top: 2px;
+		box-sizing: border-box;
+		box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+
+	}
+	.menu{
+		width: 30%;
+		list-style-type: none;
+		height: auto;
+	}
+	.menu>li{
+		width: 100%;
+		height: auto;
+		background-color: #066;
+		color:white;
+		text-align: center;
+		padding-top: 2%;
+		box-sizing: border-box;
+		box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+		margin: 1%;
+		font-size: 1.5em;
+	}
+	.submenu{
+		display: none;
+		list-style-type: none;
+	}
+	.submenu li{
+
+	}
+	li:hover ul{
+		display: block;
+	}
+	li:hover{cursor: pointer;}
+	#pro:hover span{
+		transform: rotate(-90deg);
+	}
+	#pro{
+		position: relative;
+	}
+	#pro>span{
+		position: absolute;
+		right: 10px;
+		top: 5px;
+		transform: rotate(90deg);
+		transition: all 0.5s;
+	}
+	.menu>li:first-child{
+		border-radius: 10px 10px 0px 0px;
+	}
+	.menu>li:last-child{
+		border-radius: 0px 0px 10px 10px;
+	}
+	table{
+		width: 50%;
+	}
+	tr:nth-child(odd){
+		background-color: #9FF;
+	}
+	tr:nth-child(even){
+		background-color: #CCC;
+	}
+	</style>
+</head>
+<body>
+	<p class="p1">Google</p>
+	<p class="p1">Yahoo</p>
+	<p class="p1">Facebook</p>
+	<a href="http://google.com">product</a>
+	<a href="service.com">Service</a>
+	<p class="p2">the la chi oi <br/>
+		rung bong hoa gao<br/>
+	o hay, troi khong co nang trong ngay chi sinh</p>
+	<p class="p3"></p>
+	<button>click me</button>
+	<ul class="menu">
+		<li>Home</li>
+		<li id="pro">Product <span>&laquo;</span>
+			<ul class="submenu">
+				<li>Dep</li>
+				<li>Guoc</li>
+			</ul>
+		</li>
+		<li>Help</li>
+	</ul>
+
+	<table>
+		<tr><td>abc</td></tr>
+		<tr><td>abc</td></tr>
+		<tr><td>abc</td></tr>
+		<tr><td>abc</td></tr>
+		<tr><td>abc</td></tr>
+		<tr><td>abc</td></tr>
+		<tr><td>abc</td></tr>
+		<tr><td>abc</td></tr>
+		<tr><td>abc</td></tr>
+		<tr><td>abc</td></tr>
+		<tr><td>abc</td></tr>
+		<tr><td>abc</td></tr>
+		<tr><td>abc</td></tr>
+		<tr><td>abc</td></tr>
+		<tr><td>abc</td></tr>
+		<tr><td>abc</td></tr>
+		<tr><td>abc</td></tr>
+	</table>
+</body>
+</html>

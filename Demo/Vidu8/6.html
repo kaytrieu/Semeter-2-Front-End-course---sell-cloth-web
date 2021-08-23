@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		//hướng dẫn tạo các object trong js
+		//cách 1
+		var x=new Object();
+		x.id="SE1";
+		x.name="Tai";
+		window.alert(x.id+","+x.name);
+		//cách 2
+		function output(){
+			window.alert(this.id+","+this.name);
+		}
+		//tạo constructor
+		function product (id,name) {
+			// body... 
+			this.id=id;
+			this.name=name;
+			//methods
+			this.display = function(){
+				window.alert(this.id+","+this.name);
+			}
+			this.show=output;
+		}
+		function demo(){
+			var x=new product("SE1111","Tai");
+			var y= new product("SE222","Duy");
+
+			x.display();
+			x.show();
+			with(y){
+				display();
+				show();
+			}
+		}
+	</script>
+</head>
+<body onload="demo()">
+
+</body>
+</html>

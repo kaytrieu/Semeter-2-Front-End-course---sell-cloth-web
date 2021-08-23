@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    var a=[{image: "IMG/3.jpg", id:1},
+    {image: "4.jpg", id:1},
+    {image: "5.jpg", id:1},
+    {image: "6.jpg", id:1},
+    {image: "7.jpg", id:1}];
+    var i = 0;
+
+    function next() {
+        if (i < a.length - 1) {
+            i++;
+            var anh = document.getElementById("to");
+            anh.src = a[i].image;
+        }
+    }
+    function pre() {
+        if (i > 0) {
+            i--;
+            var anh = document.getElementById("to");
+            anh.src = a[i].image;
+        }
+    }
+    function loadAnh() {
+    	var a=document.getElementById("d2");
+    	for (var j = 0; j < a.length; j++) {
+    		var anh = document.createElement("img");
+        	anh.src = a[j].image;
+        	anh.setAttribute("class", "nho");
+        	a.appendChild(anh);
+    	}
+    }
+    </script>
+    <style type="text/css">
+    	.nho{
+    		width: 120px;
+    		height: 120px;
+    		margin: 1px;
+    		float: left;
+    	}
+    	#d1{
+    		width: 55%;
+    		margin: 1%;
+    		height: 750px;
+			float: left;
+			box-sizing: border-box;
+    	}
+    	#d2{
+    		width: 41%;
+    		margin: 1%;
+    		height: 750px;
+			float: left;
+			box-sizing: border-box;
+    	}
+    	#to{
+    		height: 720px;
+    		width: 70%;
+    	}
+    	button{
+    		position: relative;
+    		top: -350px;
+    		width: 50px;
+    		height: 50px;
+    		margin: 4px;
+    		background-color: black;
+    		color: white;
+    		font-size: 2em;
+    	}
+    </style>
+</head>
+
+<body onload="loadAnh()">
+    <div id="d1">
+        <button onclick="pre()">&lt;</button>
+        <img src="IMG/3.jpg" id="to"/>
+        <button onclick="next()">&gt;</button>
+    </div>
+    <div id="d2">
+    	<img src="IMG/3.jpg" alt="" class="nho">
+    	<img src="IMG/4.jpg" alt="" class="nho">
+    	<img src="IMG/5.jpg" alt="" class="nho">
+    	<img src="IMG/6.jpg" alt="" class="nho">
+    	<img src="IMG/7.jpg" alt="" class="nho">
+    </div>
+</body>
+
+</html>

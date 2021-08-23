@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			font-size: 20px;
+		}
+		ul{
+			list-style-type: none;
+		}
+		.subbutton{
+			background: none;
+			color: blue;
+			border:none;
+		}
+		.menu{
+			float: left;
+			height: 100px;
+			width: 100%;
+			box-sizing: border-box;
+			z-index: 1;
+			border-bottom: 3px solid grey;
+		}
+		.subnav{
+			height: 100%;
+			margin:none;
+			float: left;
+			margin-right: 5px;
+			margin-left: 5px;
+		}
+		.menu>img{
+			float: left;
+			height: 50%;
+			width: auto;
+			padding-top: 20px;
+			margin: 0px 20px 0px 20px;
+		}
+		.subbutton{
+			height: 100%;
+			width: auto;
+			font-size: 1.2em;
+			font-weight: bold;
+			
+		}
+		.search{
+			box-sizing: border-box;
+			height: 30px;
+			float: left;
+			width: 300px;
+			border: 1px solid black;
+			margin-top: 30px;
+			border-radius: 5px;
+			padding-top: 2px;
+			padding-left: 5px;
+		}
+		.search>img{
+			float:right;
+			position: relative;
+			top:-2px;
+		}
+		.content{
+			height: 0px;
+			width: 0px;
+			overflow: hidden;
+			position: relative;			
+			opacity: 0;
+		}
+		.content>div{
+			float: left;
+			width: 100%;
+		}
+		.content>div>ul{
+			float: left;
+			width: 21%;
+		}
+		.subnav:hover .content{
+			opacity: 1;
+			height: auto;
+			width: 80%;
+			overflow: hidden;
+			position: absolute;
+			left: 8%;
+			z-index: 2;
+			background: white;
+			border: 1px solid grey;
+			padding: 10px 20px 10px 20px;
+			border-top: 3px solid blue;
+
+		}
+		.subnav:hover .subbutton{
+			background: blue;
+			color: white;
+		}
+		.titlesub{
+			padding-top: 30px;
+			color: blue;
+			font-weight: bold;
+			font-size: 1.5em;
+		}
+		.titlesub button{
+			background-color: blue;
+			float: right;
+			padding-right: 10px;
+			color: white;
+			height: 50px;
+			font-size: 0.8em;
+			border:none;
+			padding-top: 0;
+		}
+		.sign{
+			float:right;
+			height: 80px;
+			width: 130px;
+			background-color: white;
+			font-size: 1em;
+			border:none;
+		}
+		.reg{
+			float:right;
+			height: 80px;
+			width: 130px;
+			background-color: blue;
+			font-size: 1em;
+			border:none;
+			color:white;
+		}
+		.page{
+			float:left;
+			height:auto;
+			width: 100%;
+			padding-top: 50px;
+			box-sizing: border-box;
+		}
+		.page>img{
+			float: left;
+		}
+		.d{
+			width: 30%;
+			float: left;
+		}
+		.d1{
+			float: right;
+			width: 30px;
+		}
+		#b1{
+			background-color: green;
+			color:white;
+			height: 100px;
+			width: 80%;
+		}
+		table{
+			text-align: center;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="menu">
+		<img src="edx-logo-header.png">
+		<div class="subnav">
+			<button class="subbutton">Courses &dtrif;</button>
+			<div class="content">
+				<div class="titlesub">COURSES by subject <button>View All Courses</button><br><br><hr></div>
+				<div>
+					<ul>
+						<li>Architecture</li>
+						<li>art & culture</li>
+						<li>Biologi&Life Sciences</li>
+					</ul>
+					<ul>
+						<li>design</li>
+						<li>Economics&Finance</li>
+						<li>Education & teacher Trainning</li>
+					</ul>
+					<ul>
+						<li>Food&Nutrition</li>
+						<li>Health & Safety</li>
+						<li>History</li>
+					</ul>
+					<ul>
+						<li>Medicine</li>
+						<li>Music</li>
+						<li>Philosophy & Ethics</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="subnav">
+			<button class="subbutton">Programs &dtrif;</button>
+			<div class="content">
+				<div class="titlesub">PROGRAMS by subject <button>View All Program</button><br><br><hr></div>
+				<div>
+					<ul>
+						<li>Micro</li>
+						<li>Culture</li>
+						<li>Sciences</li>
+					</ul>
+					<ul>
+						<li>Design</li>
+						<li>Economics</li>
+						<li>Trainning</li>
+					</ul>
+					<ul>
+						<li>Food&Nutrition</li>
+						<li>Health & Safety</li>
+						<li>History</li>
+					</ul>
+					<ul>
+						<li>Medicine</li>
+						<li>Music</li>
+						<li>Philosophy & Ethics</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="subnav">
+			<button class="subbutton">Schools & Partners</button>		
+		</div>
+		<div class="subnav">
+			<button class="subbutton">About &dtrif;</button>
+			<div class="content">
+				<div class="titlesub">ABOUT by subject <button>View All</button><br><br><hr></div>
+				<div>
+					<ul>
+						<li>Architecture</li>
+						<li>art & culture</li>
+						<li>Biologi&Life Sciences</li>
+					</ul>
+					<ul>
+						<li>design</li>
+						<li>Economics&Finance</li>
+						<li>Education & teacher Trainning</li>
+					</ul>
+					<ul>
+						<li>Food&Nutrition</li>
+						<li>Health & Safety</li>
+						<li>History</li>
+					</ul>
+					<ul>
+						<li>Medicine</li>
+						<li>Music</li>
+						<li>Philosophy & Ethics</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="search">
+			Search:
+			<img src="search_small_1056745.png" height="30px" width="30px">
+			
+		</div>
+		<button class="reg">Register</button>
+		<button class="sign">Sign In</button>
+		
+	</div>
+	<div class="page">
+		<table>
+			<tr>
+		<td><img src="5.jpg" height="250px" width="400px"></td>
+		<td>
+			
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, tenetur reprehenderit doloribus, magni ea at distinctio, ex pariatur laboriosam aperiam quae veritatis natus enim. Esse odio dicta nemo possimus. Nesciunt!</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias adipisci, ea aspernatur fugit eligendi nulla omnis itaque quae quibusdam quasi vitae, sapiente pariatur tempore excepturi voluptatibus, iste laboriosam praesentium qui.</p>
+		</td>
+		<td>
+			Self-paced<br>
+			<button id="b1">
+				Enroll Now
+			</button><br>
+			<input type="checkbox"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum tempora, error est, maxime ratione nobis fugiat molestias quisquam, delectus animi fugit, nulla dolorum. In vel iusto ipsa quaerat nam recusandae?
+		</td>
+			<tr>
+		</table>
+	</div>
+</body>
+</html>

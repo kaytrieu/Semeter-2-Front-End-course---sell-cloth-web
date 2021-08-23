@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.ngoai{
+			width: 800px;
+			height: 400px;
+			overflow: hidden;
+			position: relative;
+		}
+		.con{
+			width: 3200px;
+			height: 400px;
+			transition: all 0.5s;
+			animation-name: laisau;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+		}
+		.con img{
+			width: 800px;
+			height: 400px;
+			float: left;
+		}
+		@keyframes laisau{
+			0%{
+				position: absolute;
+				left: 0px;
+			}
+			33%{
+				position: absolute;
+				left: -800px;
+			}
+			66%	{
+				position: absolute;
+				left: -1600px;
+			}
+			99%{
+				position: absolute;
+				left:-2400px;
+			}
+			100%{
+				position: absolute;
+				right: 0px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="ngoai">
+		<div class="con">
+			<img src="img4.jpg">
+			<img src="img2.jpg">
+			<img src="img3.jpg">
+			<img src="img4.jpg">
+		</div>
+	</div>
+</body>
+</html>

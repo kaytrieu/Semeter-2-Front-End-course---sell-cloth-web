@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#ngoai{
+			width: 600px;
+			height: 300px;
+			overflow: hidden;
+		}
+		#trong{
+			width: 1800px;
+			height: 300px;
+			transition: all 0.5s;
+		}
+		#trong img{
+			width: 600px;
+			height: 300px;
+			float: left;
+
+		}
+		input {
+			width: 40px;
+			height: 40px;
+			border-radius: 100%;
+		}
+	</style>
+	<script type="text/javascript">
+		function demo1(id,offset){
+			var thediv=document.getElementById(id);
+			thediv.style.transform="translateX("+offset+")";
+		}
+	</script>
+</head>
+<body>
+<div id="ngoai">
+	<div id="trong">
+		<img src="img1.jpg">
+		<img src="img2.jpg">
+		<img src="img3.jpg">
+	</div>
+</div>
+<input type="button" value="1" onclick="demo1('trong','0px')"/>
+<input type="button" value="2" onclick="demo1('trong','-600px')"/>
+<input type="button" value="3" onclick="demo1('trong','-1200px')"/>
+</body>
+</html>
